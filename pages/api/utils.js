@@ -18,8 +18,8 @@ export default async function handler(req, res) {
             })
             usersCount++
         }
-        const videoURL = 'https://bootcamp-jassalam.fra1.digitaloceanspaces.com/levi-arnold-IsKdeeEeyUQ-unsplash.jpg'
-        const thumbnailURL = 'https://bootcamp-jassalam.fra1.digitaloceanspaces.com/SampleVideo_720x480_5mb.mp4'
+        const videoURL = 'https://bootcamp-jassalam.fra1.digitaloceanspaces.com/SampleVideo_360x240_2mb.mp4'
+        const thumbnailURL = 'https://bootcamp-jassalam.fra1.digitaloceanspaces.com/dog.png'
 
         const users = await prisma.user.findMany()
 
