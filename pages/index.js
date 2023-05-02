@@ -1,17 +1,12 @@
 import { getVideos } from 'lib/data.js'
 import prisma from 'lib/prisma'
 import Videos from './components/Videos'
+import Heading from './components/Heading'
 
 export default function Index({ videos }) {
   return (
     <div>
-      <header className='h-14 flex pt-5 px-5 pb-2'>
-        <div className='text-xl'>
-          <p>YouTube clone</p>
-        </div>
-
-        <div className='grow'></div>
-      </header>
+      <Heading />
 
       {videos.length === 0 && (
         <p className='flex justify-center mt-20'>No videos found!</p>

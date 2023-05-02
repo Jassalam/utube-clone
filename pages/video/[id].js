@@ -1,5 +1,8 @@
+import Heading from '../components/Heading'
+
 import dynamic from 'next/dynamic'
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
+
 
 import prisma from 'lib/prisma'
 import { getVideo, getVideos } from 'lib/data.js'
@@ -12,14 +15,7 @@ export default function SingleVideo({ video, videos }) {
 
     return (
         <>
-            <header className='h-14 flex pt-5 px-5 pb-2'>
-                <Link href={`/`} className='underline'>
-                    Home
-                </Link>
-
-                <div className='grow'></div>
-            </header>
-
+            <Heading/>
             <div className='h-screen flex items-center'>
                 <div className='flex w-full md:w-2/3 flex-col mb-4 border-t border-r border-b border-3 border-black pl-0 bg-black'>
                     <div className='relative pt-[60%]'>
