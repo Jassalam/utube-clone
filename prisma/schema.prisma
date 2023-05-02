@@ -22,8 +22,8 @@ model User {
   accounts      Account[]
   sessions      Session[]
   Video         Video[]
-  subscribers   User[]    @relation("Subscribers")
-  subscribedTo  User[]    @relation("Subscribers")
+  subscribers  User[] @relation("Subscribers")
+  subscribedTo User[] @relation("Subscribers")
   
 }
 
