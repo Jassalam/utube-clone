@@ -10,6 +10,7 @@ import SubscribedButton from "../components/SubscribedButton"
 import { useSession } from "next-auth/react"
 import { authOptions } from "../api/auth/[...nextauth]"
 import { getServerSession } from "next-auth"
+import Link from "next/link"
 
 export default function Channel({ user, initialVideos, subscribers, subscribed }) {
     const [videos, setVideos] = useState(initialVideos)
@@ -46,7 +47,11 @@ export default function Channel({ user, initialVideos, subscribers, subscribed }
                     </div>
                     <div className='mt-12 mr-5'>
                         {session && user.id === session.user.id ? (
-                            <></>
+                            <>
+                            <Link href={`/upload`} className='bg-green-500 px-3 py-2 rounded-full'>
+                                Upload new video
+                            </Link>
+                            </>
                         ) : (
                             <SubscribedButton user={user} subscribed={subscribed}/>
                         )}
