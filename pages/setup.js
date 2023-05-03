@@ -78,6 +78,7 @@ export default function Setup() {
                 }
                 setImage(event.target.files[0])
                 setImageURL(URL.createObjectURL(event.target.files[0]))
+                console.log('image url ', imageURL)
               }
             }}
           />

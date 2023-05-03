@@ -16,7 +16,7 @@ export default function Index({ initialVideos }) {
 
    const loading = status === 'loading'
    
-   if('loading'){
+   if(loading){
     return null
    }
 
